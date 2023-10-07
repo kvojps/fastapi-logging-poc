@@ -1,0 +1,4 @@
+pip-tools # lock de dependencias
+pytest # execucao de testes
+pytest-order # ordenacao de execucao de testes
+httpx # requests async para testes
