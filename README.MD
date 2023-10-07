@@ -1,4 +1,4 @@
-# Execução do projeto local
+# Execução local do projeto
 
 * Caso não possua um ambiente virtual, crie:
   * python -m venv venv
