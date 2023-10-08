@@ -7,6 +7,8 @@
 * Se ainda não possuir as dependências do projeto instaladas, execute:
   * pip install -r requirements-dev.txt
   * pip-compile requirements.in
+* Crie um arquivo .env na raíz do projeto, e adicione:
+  * DYNACONF_DB_URI = "{Adicionar URI de conexão}"
 * Na pasta raíz do projeto:
   * uvicorn api.app:app --reload
 * Acesse [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) **(Swagger do projeto)**
