@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from api.controller import main_router
+from api.controllers import main_router
 from api.models import create_tables
 from api.config.db import init_db
 
