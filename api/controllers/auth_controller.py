@@ -1,9 +1,11 @@
 from fastapi import APIRouter, Depends, status
 
+from api.services.user_service import UserService
+
 from api.adapters.user_adapter import UserAdapter
+
 from api.models.serializers.user import UserDTO
 from api.models.serializers.auth import AuthResponse
-from api.services.user_service import UserService
 
 router = APIRouter()
 

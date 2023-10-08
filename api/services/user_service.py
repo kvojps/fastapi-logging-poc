@@ -1,10 +1,12 @@
 from fastapi import HTTPException, status
 
+from api.config.security import get_hashed_password, verify_password, create_access_token, create_refresh_token
+
+from api.ports.user_repository import UserRepository
+
 from api.models.user import User
 from api.models.serializers.user import UserDTO, UserResponse
 from api.models.serializers.auth import AuthResponse
-from api.ports.user_repository import UserRepository
-from api.config.security import get_hashed_password, verify_password, create_access_token, create_refresh_token
 
 
 class UserService:

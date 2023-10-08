@@ -2,6 +2,7 @@ from fastapi import Request, HTTPException
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
 from jose import jwt
+
 from api.config.security import JWT_SECRET_KEY, ALGORITHM
 
 

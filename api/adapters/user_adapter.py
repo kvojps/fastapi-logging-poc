@@ -1,7 +1,9 @@
+from api.config.db import SessionLocal
+
+from api.ports.user_repository import UserRepository
+
 from api.models.user import User
 from api.models.serializers.user import UserDTO
-from api.ports.user_repository import UserRepository
-from api.config.db import SessionLocal
 
 
 class UserAdapter(UserRepository):

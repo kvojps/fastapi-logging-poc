@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 
-from api.controllers import main_router
-from api.models import create_tables
 from api.config.db import init_db
+
+from api.controllers import main_router
+
+from api.models import create_tables
 
 app = FastAPI(
     title="API - Aluguel de imóveis",
