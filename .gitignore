@@ -45,6 +45,7 @@
 
 # Custom
 .venv
+.env
 *.egg-info
 _pycache_/
 *.py[cod]
