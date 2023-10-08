@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 
 from api.controller import main_router
-from api.models import user
-from api.config.db import init_db, engine
+from api.models import create_tables
+from api.config.db import init_db
 
 app = FastAPI(
     title="API - Aluguel de imóveis",
@@ -13,8 +13,7 @@ app = FastAPI(
 
 @app.on_event("startup")
 def start_db():
-    # refatorar apos criacao de repositorios
-    user.Base.metadata.create_all(bind=engine)
+    create_tables()
     init_db()
 
 
