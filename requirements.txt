@@ -10,6 +10,8 @@ anyio==3.7.1
     #   starlette
 click==8.1.7
     # via uvicorn
+dynaconf==3.2.3
+    # via -r requirements.in
 exceptiongroup==1.1.3
     # via anyio
 fastapi==0.103.2
