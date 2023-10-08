@@ -10,3 +10,7 @@
 * Na pasta raíz do projeto:
   * uvicorn api.app:app --reload
 * Acesse [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) **(Swagger do projeto)**
+
+# Execução com Docker
+
+* docker compose up
