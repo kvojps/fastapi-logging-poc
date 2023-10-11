@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 
 from .dynaconf import settings
 
-SQLALCHEMY_DATABASE_URL = settings.DB_URI
+SQLALCHEMY_DATABASE_URL = settings.POSTGRES_DB_URI
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
