@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 
-from api.config.postgres_db import init_db
+from api.config.postgres_db import init_postgres_db
+from api.config.mongo_db import init_mongo_db
 
 from api.controllers import main_router
 
@@ -14,9 +15,14 @@ app = FastAPI(
 
 
 @app.on_event("startup")
-def start_db():
+def start_postgres_db():
     create_tables()
-    init_db()
+    init_postgres_db()
+
+
+@app.on_event("startup")
+async def start_mongo_db():
+    await init_mongo_db()
 
 
 app.include_router(main_router)

@@ -13,14 +13,25 @@ services:
       - .:/home/app/api
     depends_on:
       - db
+      - mongo
 
   db:
     image: postgres:13-alpine
     volumes:
       - $HOME/.postgres/mktplace_db/data/postgresql:/var/lib/postgresql/data
     ports:
-      - "5433:5432"
+      - "5432:5432"
     environment:
       POSTGRES_DB: imoveis
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+  mongo:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+    volumes:
+      - $HOME/.mongodb/data/:/data/db
