@@ -7,3 +7,4 @@ dynaconf
 python-jose[cryptography]
 passlib[bcrypt]
 python-multipart
+beanie
