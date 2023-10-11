@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String
 
-from api.config.db import Base
+from api.config.postgres_db import Base
 
 
 class User(Base):

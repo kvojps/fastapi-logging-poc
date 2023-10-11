@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from api.config.db import init_db
+from api.config.postgres_db import init_db
 
 from api.controllers import main_router
 

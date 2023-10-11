@@ -1,4 +1,4 @@
-from api.config.db import SessionLocal
+from api.config.postgres_db import SessionLocal
 
 from api.ports.user_repository import UserRepository
 

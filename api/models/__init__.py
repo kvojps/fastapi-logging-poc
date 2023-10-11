@@ -1,5 +1,5 @@
 from .user import User
-from api.config.db import engine
+from api.config.postgres_db import engine
 
 
 def create_tables():
