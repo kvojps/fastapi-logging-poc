@@ -1,3 +1,3 @@
 from dynaconf import Dynaconf
 
-settings = Dynaconf(load_dotenv=True)
+settings = Dynaconf(envvar_prefix=False, load_dotenv=True)
