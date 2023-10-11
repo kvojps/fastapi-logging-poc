@@ -3,6 +3,10 @@ from enum import Enum
 from beanie import Document
 
 
+class Area(Enum):
+    USUARIOS = "USUARIOS"
+
+
 class Type(Enum):
     LOGIN = "LOGIN"
     LOGOUT = "LOGOUT"
@@ -14,5 +18,6 @@ class Type(Enum):
 class UserLog(Document):
     date: datetime
     user: str
+    area: Area
     type: Type
     action: str
