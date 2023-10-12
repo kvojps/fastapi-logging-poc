@@ -13,9 +13,9 @@ from api.adapters.user_log_adapter import UserLogAdapter
 from api.models import create_tables
 
 app = FastAPI(
-    title="API - Aluguel de imóveis",
+    title="API - Logging POC",
     version="0.1.0",
-    description="API Rest para sistema de aluguel de imóveis"
+    description="API Rest validar conceitos de logging com FastAPI"
 )
 
 
