@@ -9,7 +9,7 @@ from api.models.user_log import UserLog, Area, Type
 
 from datetime import datetime
 import json
-import jwt  # type:ignore
+import jwt
 
 
 class Logging:
@@ -82,7 +82,7 @@ class Logging:
         try:
             payload = jwt.decode(token, algorithms=["HS256"], options={
                 "verify_signature": False})
-            username = payload.get("username")
+            username = payload.get("sub")
         except jwt.DecodeError:
             raise HTTPException(401, "JWT inválido")
 
